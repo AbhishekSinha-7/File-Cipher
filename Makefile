@@ -2,18 +2,18 @@ CXX = g++
 CXXFLAGS = -std=c++17 -g -Wall -I. -Isrc/app/encryptDecrypt -Isrc/app/fileHandling -Isrc/app/processes
 
 MAIN_TARGET = encrypt_decrypt
-CRYPTION_TARGET = cryption
+CRYPTION_TARGET = Cryption
 
 MAIN_SRC = main.cpp \
            src/app/processes/ProcessManagement.cpp \
            src/app/fileHandling/IO.cpp \
-           src/app/fileHandling/ReadEnv.cpp \
+           src/app/fileHandling/readEnv.cpp \
            src/app/encryptDecrypt/Cryption.cpp
 
 CRYPTION_SRC = src/app/encryptDecrypt/CryptionMain.cpp \
                src/app/encryptDecrypt/Cryption.cpp \
                src/app/fileHandling/IO.cpp \
-               src/app/fileHandling/ReadEnv.cpp
+               src/app/fileHandling/readEnv.cpp
 
 MAIN_OBJ = $(MAIN_SRC:.cpp=.o)
 CRYPTION_OBJ = $(CRYPTION_SRC:.cpp=.o)
