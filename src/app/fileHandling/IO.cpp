@@ -9,6 +9,7 @@ IO::IO(const std::string& file_path) {
     }
 }
 
+//Destructor
 IO::~IO() {
     if (file_stream.is_open()) {
         file_stream.close();
@@ -16,5 +17,7 @@ IO::~IO() {
 }
 
 std::fstream IO::getFileStream() {
+
+    //transfers ownership of the file stream,
     return std::move(file_stream);
 }
